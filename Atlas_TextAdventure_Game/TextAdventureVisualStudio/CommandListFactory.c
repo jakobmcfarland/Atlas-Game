@@ -36,6 +36,7 @@ CommandList* CreateCommandList()
 
 	/* TODO REQUIRED: create the "quit" command
 	TODO BASIC: add a short alias "q" */
+	CommandList_Add(cmdListPtr, "quit", HandleQuitCommand, true);
 
 	/* TODO REQUIRED: create the "drop" command
 	TODO BASIC: add a short alias "d" */
