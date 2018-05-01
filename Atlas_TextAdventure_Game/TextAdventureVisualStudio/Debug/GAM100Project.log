@@ -1,4 +1,6 @@
 ﻿  WorldDataFactory.c
+c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\worlddatafactory.c(47): error C2220: warning treated as error - no 'object' file generated
+c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\worlddatafactory.c(47): warning C4189: 'Flooded': local variable is initialized but not referenced
   WorldData.c
   UseCommandHandler.c
   TakeCommandHandler.c
@@ -25,8 +27,10 @@
   CommandList.c
   CommandHandler.c
   BrickFunctions.c
+  PlayerStateFactory.c
+  PlayerState.c
+c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\playerstate.c(57): error C2220: warning treated as error - no 'object' file generated
+c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\playerstate.c(57): warning C4098: 'SetPlayerBreathe': 'void' function returning a value
   main.c
   CommandListFactory.c
   Generating Code...
-  GAM100Project.vcxproj -> C:\Users\ryan.scheppler\Desktop\GAM100Spring2018\C\Projects\Assignment2-TextAdventure\Debug\GAM100Project.exe
-  GAM100Project.vcxproj -> C:\Users\ryan.scheppler\Desktop\GAM100Spring2018\C\Projects\Assignment2-TextAdventure\Debug\GAM100Project.pdb (Partial PDB)
