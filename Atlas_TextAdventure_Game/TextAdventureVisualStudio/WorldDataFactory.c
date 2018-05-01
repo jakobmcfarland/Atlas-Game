@@ -61,6 +61,8 @@ Room* Room0_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 10);
+	Room_AddRoomExit(room, "east", 11);
 	Room_AddRoomExit(room, "west", 1);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
@@ -77,6 +79,11 @@ Room* Room1_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 8);
+	Room_AddRoomExit(room, "west", 2);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, true);
 
@@ -90,6 +97,12 @@ Room* Room2_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 3);
+	Room_AddRoomExit(room, "east", 1);
+	Room_AddRoomExit(room, "west", 4);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -105,6 +118,10 @@ Room* Room3_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 2);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -118,6 +135,12 @@ Room* Room4_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 6);
+	Room_AddRoomExit(room, "east", 2);
+	Room_AddRoomExit(room, "west", 5);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -133,6 +156,10 @@ Room* Room5_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "east", 4);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -146,6 +173,11 @@ Room* Room6_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 4);
+	Room_AddRoomExit(room, "south", 7);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -161,6 +193,10 @@ Room* Room7_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 6);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -174,6 +210,11 @@ Room* Room8_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);
+	Room_AddRoomExit(room, "south", 9);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -189,6 +230,11 @@ Room* Room9_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 8);
+	Room_AddRoomExit(room, "east", 10);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -202,6 +248,10 @@ Room* Room10_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "west", 9);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -217,6 +267,11 @@ Room* Room11_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "east", 12);
+	Room_AddRoomExit(room, "west", 0);
+
 	return room;
 }
 
@@ -227,6 +282,12 @@ Room* Room12_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 13);
+	Room_AddRoomExit(room, "east", 15);
+	Room_AddRoomExit(room, "west", 11);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -242,6 +303,11 @@ Room* Room13_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 12);
+	Room_AddRoomExit(room, "south", 14);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -255,6 +321,10 @@ Room* Room14_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 13);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -270,6 +340,11 @@ Room* Room15_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "east", 16);
+	Room_AddRoomExit(room, "west", 12);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -283,6 +358,12 @@ Room* Room16_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 17);
+	Room_AddRoomExit(room, "south", 18);
+	Room_AddRoomExit(room, "west", 15);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -298,6 +379,10 @@ Room* Room17_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 16);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -311,6 +396,10 @@ Room* Room18_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 16);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -326,6 +415,11 @@ Room* Room19_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 21);
+	Room_AddRoomExit(room, "south", 0);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -339,6 +433,10 @@ Room* Room20_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "east", 21);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -354,6 +452,12 @@ Room* Room21_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 10);
+	Room_AddRoomExit(room, "east", 22);
+	Room_AddRoomExit(room, "west", 20);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -368,6 +472,11 @@ Room* Room22_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 23);
+	Room_AddRoomExit(room, "west", 21);
+
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
 
@@ -381,6 +490,10 @@ Room* Room23_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 22);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
