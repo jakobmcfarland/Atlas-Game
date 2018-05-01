@@ -42,9 +42,8 @@ Room* RoomN_Build()
 	   add items to the room */
 	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
 
-	/*  Flooded
-		boolean value, interacts with player's breath*/
-	int Flooded = 0;
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	/* Return the new room */
 	return room;
@@ -66,6 +65,9 @@ Room* Room0_Build()
 	Room_AddRoomExit(room, "east", 11);
 	Room_AddRoomExit(room, "west", 1);
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, true);
+
 	return room;
 }
 
@@ -76,6 +78,9 @@ Room* Room1_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, true);
 
 	return room;
 }
@@ -88,6 +93,9 @@ Room* Room2_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -98,6 +106,9 @@ Room* Room3_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -110,6 +121,9 @@ Room* Room4_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -120,6 +134,9 @@ Room* Room5_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -132,6 +149,9 @@ Room* Room6_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -142,6 +162,9 @@ Room* Room7_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -154,6 +177,9 @@ Room* Room8_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -165,6 +191,9 @@ Room* Room9_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -175,6 +204,9 @@ Room* Room10_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -198,6 +230,9 @@ Room* Room12_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -208,6 +243,9 @@ Room* Room13_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -220,6 +258,9 @@ Room* Room14_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -230,6 +271,9 @@ Room* Room15_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -242,6 +286,9 @@ Room* Room16_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -252,6 +299,9 @@ Room* Room17_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -264,6 +314,9 @@ Room* Room18_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -274,6 +327,9 @@ Room* Room19_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -286,6 +342,9 @@ Room* Room20_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -296,6 +355,9 @@ Room* Room21_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -308,6 +370,9 @@ Room* Room22_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
+
 	return room;
 }
 
@@ -318,6 +383,9 @@ Room* Room23_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }

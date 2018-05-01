@@ -24,6 +24,7 @@ typedef struct Room
 	char description[MAX_ROOM_DESCRIPTION_LENGTH]; /* The description of the room */
 	ItemList* itemList; /* A list of items in the room */
 	RoomExit* roomExitHead; /* A list of exits from the room */
+	bool Flooded;  /*  Flooded boolean value, interacts with player's breath*/
 } Room;
 
 
@@ -161,6 +162,9 @@ void Room_Print(Room *room)
 
 	/* print the set of exits in the given room */
 	PrintRoomExits(room->roomExitHead);
+
+	/* Helper: Prints the a warning if the room is flooded */
+	PrintRoomFlooded(room);
 }
 
 
@@ -199,4 +203,32 @@ void PrintRoomExits(RoomExit* roomExitList)
 	RoomExit_Print(roomExitList);
 
 	printf(".\n");
+}
+
+/* Set the flooded value of a room*/
+void Room_Flooded(Room *room, bool flooded)
+{
+	/* safety check on the parameters */
+	if (room == NULL)
+	{
+		return;  /* take no action if the parameters are invalid */
+	}
+
+	room->Flooded = flooded;
+}
+
+/* Helper: Prints the a warning if the room is flooded */
+void PrintRoomFlooded(Room *room)
+{
+	/* safety check on the parameters */
+	if (room == NULL)
+	{
+		return; /* take no action if the parameters are invalid */
+	}
+
+	if (room->Flooded)
+	{
+		/* print warning if the room is flooded */
+		printf("Warning: The Room is Flooded!\n");
+	}
 }

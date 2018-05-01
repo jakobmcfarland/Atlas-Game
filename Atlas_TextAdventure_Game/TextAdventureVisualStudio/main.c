@@ -16,8 +16,8 @@ This file implements the main function and game loop.
 #include "CommandHandler.h" /* HandleCommand */
 #include "GameStateFactory.h" /* CreateInitialGameState */
 #include "GameState.h" /* struct GameState */
-#include "PlayerState.h" /* PlayerState */
 #include "PlayerStateFactory.h" /* CreateInitialPlayerState*/
+#include "PlayerState.h" /* PlayerState */
 #include "WorldDataFactory.h" /* CreateTestWorldData */
 #include "WorldData.h" /* WorldData_PrintIntroduction, WorldData_Free */
 

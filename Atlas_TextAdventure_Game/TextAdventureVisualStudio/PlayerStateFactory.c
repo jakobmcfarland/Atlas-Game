@@ -7,14 +7,14 @@ All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 *****/
 
 #include "PlayerStateFactory.h" /* Function declarations */
-#include "PlayerState.h" /* struct GameState, GameState_Create */
+#include "PlayerState.h" /* struct PlayerState,PlayerState_Create */
 
-/* Create the game state for a new game */
-PlayerState* CreateInitialGameState()
+/* Create the player state for a new game */
+PlayerState* CreateInitialPlayerState()
 {
-	PlayerState* initialPlayerState; /* the new GameState object we will return */
+	PlayerState* initialPlayerState; /* the new PlayerState object we will return */
 
-								 /* create an empty GameState object */
+	 /* create an empty PlayerState object */
 	initialPlayerState = PlayerState_Create();
 
 	/* the user starts with a score of 0 */
