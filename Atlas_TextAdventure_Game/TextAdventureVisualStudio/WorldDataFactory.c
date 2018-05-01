@@ -57,14 +57,16 @@ Room* Room0_Build()
 
 	/* Create the room
 	include an initial room description */
-	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+	room = Room_Create("DEBUG 0: This is a template - Include a description for the room here\n");
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "west", 1);
+	Room_AddRoomExit(room, "test", 1);
+
+	ItemList_AddItem(Room_GetItemList(room), GoldPiece_Build());
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
-	Room_Flooded(room, true);
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -75,7 +77,7 @@ Room* Room1_Build()
 
 	/* Create the room
 	include an initial room description */
-	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+	room = Room_Create("DEBUG 1: This is a template - Include a description for the room here\n");
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, true);
@@ -399,17 +401,15 @@ WorldData* CreateInitialWorldData()
 
 	/* TODO REQUIRED: update room count to match the number of rooms you have created and added to the world
 	   if this number doesn't match then your game will either crash or you will end up stuck in a broken room with no exits */
-	int roomCount = 2;
+	int roomCount = 3;
 
 	/* create the new WorldData object with 3 rooms */
 	worldData = WorldData_Create("Welcome to my GAM100 Game!\n\n", roomCount);
 
 	/* build each room and assign them to the world data */
 	WorldData_SetRoom(worldData, 0, Room0_Build());
-
 	WorldData_SetRoom(worldData, 1, Room1_Build());
-
-	/* TODO: add all rooms to the world data */
+	WorldData_SetRoom(worldData, 2, Room2_Build());
 
 	/* return the new object */
 	return worldData;

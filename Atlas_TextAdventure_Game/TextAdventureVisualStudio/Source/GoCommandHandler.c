@@ -24,7 +24,7 @@ void HandleGoCommand(CommandData *command, GameState *gameState, PlayerState *pl
 	int nextRoomIndex; /* the index of hte next room */
 
 	/* safety check on the parameters */
-	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL)) 
+	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (playerState == NULL) || (worldData == NULL))
 	{
 		return; /* take no action if the parameters are invalid */
 	}
