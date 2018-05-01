@@ -42,24 +42,16 @@ Room* RoomN_Build()
 	   add items to the room */
 	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
 
-	//
+	/*  Flooded
+		boolean value, interacts with player's breath*/
+	int Flooded = 0;
 
 	/* Return the new room */
 	return room;
 }
 
 
-/* TODO REQUIRED: Build room 0 */
-Room* Room0_Build()
-{
-	/* Pre-declare a room pointer which we will use to build the new room */
-	Room* room = NULL;
-
-	/* TODO REQUIRED: Call Room_Create with the Room 1 description:
-	"\n" *
-	return room;
-}
-
+/* TODO: Build all rooms */
 
 
 /* ------------------------------------------------------- */
