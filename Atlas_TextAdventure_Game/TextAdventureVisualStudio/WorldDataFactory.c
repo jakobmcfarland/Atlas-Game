@@ -159,6 +159,7 @@ Room* Room5_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "east", 4);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -176,6 +177,8 @@ Room* Room6_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 4);
+	Room_AddRoomExit(room, "south", 7);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -193,6 +196,7 @@ Room* Room7_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 6);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -210,6 +214,8 @@ Room* Room8_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);
+	Room_AddRoomExit(room, "south", 9);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -227,6 +233,8 @@ Room* Room9_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 8);
+	Room_AddRoomExit(room, "east", 10);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
@@ -244,6 +252,7 @@ Room* Room10_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "west", 9);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
