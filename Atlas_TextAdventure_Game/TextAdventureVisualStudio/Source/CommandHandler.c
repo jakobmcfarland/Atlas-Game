@@ -15,7 +15,7 @@ This file implements the command handler, parsing commands and executing functio
 
 
 /* Handles the command data and executes it against the game and world state */
-void HandleCommand(CommandData* command, GameState* gameState, PlayerState *playerState, WorldData* worldData)
+void HandleCommand(CommandData* command, GameState* gameState, /*PlayerState *playerState,*/ WorldData* worldData)
 {
 	CommandFunc commandFunc; /* The command function to be executed for the given verb */
 

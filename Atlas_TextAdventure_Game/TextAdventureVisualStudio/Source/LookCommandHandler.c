@@ -29,11 +29,13 @@ void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* wo
 	/* safety check on the parameters */
 	if ((command == NULL) || (gameState == NULL) || (worldData == NULL)) 
 	{
+		/*DEBUG: prints if room is invalid -Jakob*/
+		printf("invalid\n");
 		return; /* take no action if the parameters are invalid */
 	}
 
 	/* get the current room */
-	room = WorldData_GetRoom(worldData, gameState->currentRoomIndex);
+	room = WorldData_GetRoom(worldData, gameState->currentRoomIndex); 
 
 	/* if there is no noun specified, then the command refer to the room */
 	if ((command->noun == NULL) || (strnlen_s(command->noun, MAX_COMMAND_NOUN_LENGTH) == 0))
@@ -43,6 +45,11 @@ void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* wo
 		{
 			printf("(looking at the room)\n"); /* clarify the target for the user */
 			Room_Print(room);
+		}
+		else
+		{
+			/*DEBUG: prints if room is invalid -Jakob*/
+			printf("room is null\n");
 		}
 		return;
 	}

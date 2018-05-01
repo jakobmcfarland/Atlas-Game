@@ -44,6 +44,8 @@ Room* Room_Create(const char* description)
 	room = (Room*)malloc(sizeof(Room));
 	if (room == NULL)
 	{
+		/*DEBUG: prints if room is null -Jakob*/
+		printf("malloc failed\n");
 		return NULL; /* malloc can fail! */
 	}
 
@@ -244,7 +246,7 @@ void HandleFloodedRoom(PlayerState* playerState, GameState* gameState, Room* roo
 	}
 
 	/* if the player's breathe is zero*/
-	if (GetPlayerBreathe(playerState) > 0)
+	if (GetPlayerBreathe(playerState) <= 0)
 	{
 		/* end the game using the death exit message */
 		GameState_EndGame(gameState, "You have drowned.\n");
@@ -254,6 +256,8 @@ void HandleFloodedRoom(PlayerState* playerState, GameState* gameState, Room* roo
 		/* if the room is flooded, then remove one breathe from the playerState */
 		if (room->Flooded)
 		{
+			printf("DEBUG: breathe at %i\n", GetPlayerBreathe(playerState));
+			printf("Alert: You've lost oxygen!\n");
 			SetPlayerBreathe(playerState, GetPlayerBreathe(playerState) - 1);
 		}
 	}

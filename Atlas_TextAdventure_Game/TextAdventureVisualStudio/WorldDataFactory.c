@@ -61,12 +61,10 @@ Room* Room0_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "test", 1);
-
-	ItemList_AddItem(Room_GetItemList(room), GoldPiece_Build());
+	Room_AddRoomExit(room, "north", 1);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
-	Room_Flooded(room, false);
+	Room_Flooded(room, true);
 
 	return room;
 }
@@ -78,6 +76,9 @@ Room* Room1_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG 1: This is a template - Include a description for the room here\n");
+
+	Room_AddRoomExit(room, "south", 0);
+	Room_AddRoomExit(room, "north", 2);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, true);
@@ -92,6 +93,8 @@ Room* Room2_Build()
 	/* Create the room
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	Room_AddRoomExit(room, "south", 1);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);

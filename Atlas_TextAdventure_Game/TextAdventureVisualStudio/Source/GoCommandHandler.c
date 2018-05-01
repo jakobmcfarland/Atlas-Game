@@ -18,14 +18,16 @@ the user from one room to another using defined exits.
 
 
 /* Handles the "go" command, which moves the user to another room */
-void HandleGoCommand(CommandData *command, GameState *gameState, PlayerState *playerState, WorldData *worldData)
+void HandleGoCommand(CommandData *command, GameState *gameState, WorldData *worldData, PlayerState *playerState)
 {
 	Room* currentRoom; /* the room we are currently in */
 	int nextRoomIndex; /* the index of hte next room */
 
 	/* safety check on the parameters */
-	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (playerState == NULL) || (worldData == NULL))
+	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL))
 	{
+		/*DEBUG: prints if room is invalid -Jakob*/
+		printf("invalid\n");
 		return; /* take no action if the parameters are invalid */
 	}
 

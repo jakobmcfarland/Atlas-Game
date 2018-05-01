@@ -1,4 +1,7 @@
 ﻿  WorldDataFactory.c
-  GoCommandHandler.c
+  Room.c
+d:\atlas-game\atlas_textadventure_game\textadventurevisualstudio\source\room.c(249): warning C4013: 'GetPlayerBreathe' undefined; assuming extern returning int
+d:\atlas-game\atlas_textadventure_game\textadventurevisualstudio\source\room.c(252): warning C4013: 'GameState_EndGame' undefined; assuming extern returning int
+d:\atlas-game\atlas_textadventure_game\textadventurevisualstudio\source\room.c(261): warning C4013: 'SetPlayerBreathe' undefined; assuming extern returning int
   Generating Code...
   GAM100Project.vcxproj -> D:\Atlas-Game\Atlas_TextAdventure_Game\TextAdventureVisualStudio\Debug\GAM100Project.exe

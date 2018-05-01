@@ -18,4 +18,4 @@ typedef struct WorldData WorldData;
 
 
 /* Handles the "go" command, which moves the user to another room */
-void HandleGoCommand(CommandData* command, GameState *gameState, PlayerState *playerState, WorldData *worldData);
+void HandleGoCommand(CommandData* command, GameState *gameState, WorldData *worldData, PlayerState *playerState);
