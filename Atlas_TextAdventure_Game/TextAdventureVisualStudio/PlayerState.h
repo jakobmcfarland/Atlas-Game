@@ -1,3 +1,11 @@
+/*****
+PlayerStateFactory.h
+by: Jakob McFarland
+last edited: 4/30/2018
+brief: header for PlayerState.c
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
+*****/
+
 #pragma once
 #include "stdafx.h" /* bool */
 

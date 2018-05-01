@@ -1,3 +1,10 @@
+/*****
+PlayerStateFactory.c
+by: Jakob McFarland
+last edited: 4/30/2018
+brief: builds a PlayerState object for use by the game
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
+*****/
 
 #include "PlayerStateFactory.h" /* Function declarations */
 #include "PlayerState.h" /* struct GameState, GameState_Create */

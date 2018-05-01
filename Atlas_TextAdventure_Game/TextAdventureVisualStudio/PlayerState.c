@@ -1,3 +1,10 @@
+/*****
+PlayerState.c
+by: Jakob McFarland
+last edited: 4/30/2018
+brief: an object that stores information about the player, such as the player's breathe value
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
+*****/
 
 /* from PlayerState.h: stdafx.h, used here for NULL, malloc/free, printf */
 #include "PlayerState.h" /* Function declarations */
@@ -54,7 +61,7 @@ void SetPlayerBreathe(PlayerState** playerStatePtr, int value)
 	/* safety check on the parameters */
 	if ((playerStatePtr == NULL) || (*playerStatePtr == NULL))
 	{
-		return 0; /* take no action if no valid object was provided */
+		return; /* take no action if no valid object was provided */
 	}
 
 	(*playerStatePtr)->breathe = value;

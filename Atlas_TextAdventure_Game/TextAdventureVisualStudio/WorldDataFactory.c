@@ -340,9 +340,8 @@ WorldData* CreateInitialWorldData()
 
 	/* build each room and assign them to the world data */
 	WorldData_SetRoom(worldData, 0, Room0_Build());
-	/* TODO REQUIRED: add rooms 1 and 2 to the world data */
 
-	/* TODO ADVANCED: add additional advanced rooms */
+	/* TODO: add all rooms to the world data */
 
 	/* return the new object */
 	return worldData;
