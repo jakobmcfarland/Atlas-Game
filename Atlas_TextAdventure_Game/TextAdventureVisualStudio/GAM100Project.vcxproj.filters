@@ -76,6 +76,12 @@
     <ClCompile Include="Source\WorldData.c">
       <Filter>World Data</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerState.c">
+      <Filter>Player State</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStateFactory.c">
+      <Filter>Player State</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\CommandContext.h">
@@ -171,6 +177,12 @@
     <ClInclude Include="Source\WorldDataFactory.h">
       <Filter>World Data</Filter>
     </ClInclude>
+    <ClInclude Include="PlayerState.h">
+      <Filter>Player State</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStateFactory.h">
+      <Filter>Player State</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Command Handling">
@@ -190,6 +202,9 @@
     </Filter>
     <Filter Include="World Data\Item Functions">
       <UniqueIdentifier>{d3a6b694-c6d2-4ac5-be41-7e77fee84df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player State">
+      <UniqueIdentifier>{2eb33e01-8a3f-42d6-ad2f-74b88507759b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

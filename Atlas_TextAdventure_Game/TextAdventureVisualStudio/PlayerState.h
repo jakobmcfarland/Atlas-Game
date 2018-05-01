@@ -7,12 +7,16 @@ typedef struct PlayerState
 	/* the user's score */
 	int breathe;
 
-	/* If false, the game is over and should exit */
-	bool isRunning;
-} GameState;
+} PlayerState;
 
 /* Create an empty game state object */
-GameState* GameState_Create();
+PlayerState* PlayerState_Create();
 
 /* Free the memory associated with a game-state object */
-void GameState_Free(GameState** gameStatePtr);
+void PlayerState_Free(PlayerState** playerStatePtr);
+
+/* gets the current amount of breathe the player has */
+int GetPlayerBreathe(PlayerState** playerStatePtr);
+
+/* sets the current amount of breathe */
+void SetPlayerBreathe(PlayerState** playerStatePtr, int value);

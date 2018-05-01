@@ -16,6 +16,8 @@ This file implements the main function and game loop.
 #include "CommandHandler.h" /* HandleCommand */
 #include "GameStateFactory.h" /* CreateInitialGameState */
 #include "GameState.h" /* struct GameState */
+#include "PlayerState.h" /* PlayerState */
+#include "PlayerStateFactory.h" /* CreateInitialPlayerState*/
 #include "WorldDataFactory.h" /* CreateTestWorldData */
 #include "WorldData.h" /* WorldData_PrintIntroduction, WorldData_Free */
 
@@ -27,12 +29,14 @@ int main()
 	/* Initilization and Setup */
 	/* ------------------------------------------------------------------------ */
 	GameState* gameState; /* The game state, reflecting the user's progress */
+	PlayerState* playerState; /* The player state, reflecting the user's condition (breathe) */
 	WorldData* worldData; /* The world data */
 	CommandList* commandList; /* The set of supported commands */
 	CommandData command; /* The command entered by the user */
 
 	/* create the initial game objects */
 	gameState = CreateInitialGameState();
+	playerState = CreateInitialPlayerState();
 	worldData = CreateInitialWorldData();
 	commandList = CreateCommandList();
 
@@ -71,6 +75,7 @@ int main()
 	/* ------------------------------------------------------------------------ */
 	WorldData_Free(&worldData);
 	GameState_Free(&gameState);
+	PlayerState_Free(&playerState);
 	CommandList_Free(&commandList);
 
 	/* wait for input before closing the command window */
