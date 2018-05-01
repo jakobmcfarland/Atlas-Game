@@ -270,6 +270,11 @@ Room* Room11_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "east", 12);
+	Room_AddRoomExit(room, "west", 0);
+
+	/*  set the Flooded boolean value, interacts with player's breath*/
+	Room_Flooded(room, false);
 
 	return room;
 }
@@ -284,6 +289,9 @@ Room* Room12_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 13);
+	Room_AddRoomExit(room, "east", 15);
+	Room_AddRoomExit(room, "west", 11);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
