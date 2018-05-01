@@ -17,8 +17,11 @@ PlayerState* CreateInitialPlayerState()
 	 /* create an empty PlayerState object */
 	initialPlayerState = PlayerState_Create();
 
-	/* the user starts with a score of 0 */
-	initialPlayerState->breathe = 1;
+	if (initialPlayerState != NULL)
+	{
+		/* the user starts with a breath of one*/
+		SetPlayerBreathe(initialPlayerState, 1);
+	}
 
 	/* return the new object */
 	return initialPlayerState;

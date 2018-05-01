@@ -16,4 +16,4 @@ typedef struct PlayerState PlayerState;
 typedef struct WorldData WorldData;
 
 /* Handles the command data and executes it against the game and world state */
-void HandleCommand(CommandData* command, GameState *gameState, /*PlayerState *playerState,*/ WorldData* worldData);
+void HandleCommand(CommandData* command, GameState *gameState, WorldData* worldData, PlayerState *playerState);

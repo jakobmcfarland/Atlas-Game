@@ -10,6 +10,7 @@ This file defines the Room interface, which is used to manage rooms in the game.
 ******************************************************************************/
 #include "stdafx.h" /* NULL, malloc/free, printf, strcpy_s */
 #include "Room.h" /* Function declarations */
+#include "PlayerState.h" /* getPLayerBreathe */
 #include "RoomExit.h" /* RoomExit_Add, RoomExit_Free, RoomExit_Print */
 #include "ItemList.h" /* ItemList_Free, ItemList_Print */
 
