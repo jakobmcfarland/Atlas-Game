@@ -52,6 +52,269 @@ Room* RoomN_Build()
 
 
 /* TODO: Build all rooms */
+Room* Room0_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room1_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room2_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room3_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room4_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room5_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room6_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room7_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room8_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room9_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room10_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room11_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room12_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room13_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room14_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room15_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room16_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room17_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room18_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room19_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room20_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room21_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room22_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
+
+Room* Room23_Build()
+{
+	Room* room;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	return room;
+}
 
 
 /* ------------------------------------------------------- */
