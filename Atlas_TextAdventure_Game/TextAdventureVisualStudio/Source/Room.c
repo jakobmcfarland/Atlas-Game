@@ -226,9 +226,35 @@ void PrintRoomFlooded(Room *room)
 		return; /* take no action if the parameters are invalid */
 	}
 
+	/* check if room is flooded*/
 	if (room->Flooded)
 	{
 		/* print warning if the room is flooded */
 		printf("Warning: The Room is Flooded!\n");
+	}
+}
+
+/* sets the current amount of breathe */
+void HandleFloodedRoom(PlayerState* playerState, GameState* gameState, Room* room)
+{
+	/* safety check on the parameters */
+	if ((playerState == NULL) || (room == NULL))
+	{
+		return; /* take no action if no valid object was provided */
+	}
+
+	/* if the player's breathe is zero*/
+	if (GetPlayerBreathe(playerState) > 0)
+	{
+		/* end the game using the death exit message */
+		GameState_EndGame(gameState, "You have drowned.\n");
+	}
+	else
+	{
+		/* if the room is flooded, then remove one breathe from the playerState */
+		if (room->Flooded)
+		{
+			SetPlayerBreathe(playerState, GetPlayerBreathe(playerState) - 1);
+		}
 	}
 }

@@ -1,5 +1,2 @@
 ﻿  WorldDataFactory.c
-  Room.c
-d:\atlas-game\atlas_textadventure_game\textadventurevisualstudio\source\room.c(167): warning C4013: 'PrintRoomFlooded' undefined; assuming extern returning int
-  Generating Code...
   GAM100Project.vcxproj -> D:\Atlas-Game\Atlas_TextAdventure_Game\TextAdventureVisualStudio\Debug\GAM100Project.exe

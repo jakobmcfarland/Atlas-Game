@@ -65,7 +65,7 @@ int main()
 		printf("\n");
 
 		/* handle the command */
-		HandleCommand(&command, gameState, worldData);
+		HandleCommand(&command, gameState, worldData, playerState);
 	}
 
 

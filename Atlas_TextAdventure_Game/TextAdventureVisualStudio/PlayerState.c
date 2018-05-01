@@ -8,6 +8,7 @@ All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 
 /* from PlayerState.h: stdafx.h, used here for NULL, malloc/free, printf */
 #include "PlayerState.h" /* Function declarations */
+#include "Room.h" /* Function declarations */
 
 /* Create an empty game state object */
 PlayerState* PlayerState_Create()
@@ -44,25 +45,25 @@ void PlayerState_Free(PlayerState** playerStatePtr)
 }
 
 /* gets the current amount of breathe the player has */
-int GetPlayerBreathe(PlayerState** playerStatePtr)
+int GetPlayerBreathe(PlayerState* playerStatePtr)
 {
 	/* safety check on the parameters */
-	if ((playerStatePtr == NULL) || (*playerStatePtr == NULL))
+	if ((playerStatePtr == NULL))
 	{
 		return 0; /* take no action if no valid object was provided */
 	}
 
-	return (*playerStatePtr)->breathe;
+	return playerStatePtr->breathe;
 }
 
 /* sets the current amount of breathe */
-void SetPlayerBreathe(PlayerState** playerStatePtr, int value)
+void SetPlayerBreathe(PlayerState* playerStatePtr, int value)
 {
 	/* safety check on the parameters */
-	if ((playerStatePtr == NULL) || (*playerStatePtr == NULL))
+	if (playerStatePtr == NULL)
 	{
 		return; /* take no action if no valid object was provided */
 	}
 
-	(*playerStatePtr)->breathe = value;
+	playerStatePtr->breathe = value;
 }

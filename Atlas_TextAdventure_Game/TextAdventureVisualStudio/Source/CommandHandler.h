@@ -12,7 +12,8 @@ This file declares the command handler, which parses commands and executing func
 
 typedef struct CommandData CommandData;
 typedef struct GameState GameState;
+typedef struct PlayerState PlayerState;
 typedef struct WorldData WorldData;
 
 /* Handles the command data and executes it against the game and world state */
-void HandleCommand(CommandData* command, GameState *gameState, WorldData* worldData);
+void HandleCommand(CommandData* command, GameState *gameState, PlayerState *playerState, WorldData* worldData);

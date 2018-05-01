@@ -18,7 +18,7 @@ the user from one room to another using defined exits.
 
 
 /* Handles the "go" command, which moves the user to another room */
-void HandleGoCommand(CommandData *command, GameState *gameState, WorldData *worldData)
+void HandleGoCommand(CommandData *command, GameState *gameState, PlayerState *playerState, WorldData *worldData)
 {
 	Room* currentRoom; /* the room we are currently in */
 	int nextRoomIndex; /* the index of hte next room */
@@ -48,6 +48,9 @@ void HandleGoCommand(CommandData *command, GameState *gameState, WorldData *worl
 
 	/* get the new room */
 	currentRoom = WorldData_GetRoom(worldData, gameState->currentRoomIndex);
+
+	/* handle a flooded room*/
+	HandleFloodedRoom(playerState, gameState, currentRoom);
 
 	/* print the description of the new room */
 	Room_Print(currentRoom);

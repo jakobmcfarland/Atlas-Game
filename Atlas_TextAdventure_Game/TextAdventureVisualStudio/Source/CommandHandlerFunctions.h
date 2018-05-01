@@ -13,6 +13,7 @@ which are already implemented in the library
 
 typedef struct CommandData CommandData;
 typedef struct GameState GameState;
+typedef struct PlayerState PlayerState;
 typedef struct WorldData WorldData;
 
 
@@ -23,7 +24,7 @@ void HandleHelpCommand(CommandData* command, GameState *gameState, WorldData *wo
 void HandleQuitCommand(CommandData* command, GameState *gameState, WorldData *worldData);
 
 /* Handles the "go" command, which moves the user to another room */
-void HandleGoCommand(CommandData* command, GameState *gameState, WorldData *worldData);
+void HandleGoCommand(CommandData* command, GameState *gameState, PlayerState *playerState, WorldData *worldData);
 
 /* Handles the "drop" user command, which drops an item in inventory to the current room.*/
 void HandleDropCommand(CommandData* command, GameState *gameState, WorldData *worldData);

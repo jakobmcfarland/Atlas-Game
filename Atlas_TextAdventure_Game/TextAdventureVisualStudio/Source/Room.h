@@ -18,6 +18,12 @@ typedef struct ItemList ItemList;
 typedef struct Room Room;
 
 
+/* Forward declaration of the PlayerState type */
+typedef struct PlayerState PlayerState;
+
+/* Forward declaration of the GameState type */
+typedef struct GameState GameState;
+
 /* Create an Room object with the provided data */
 Room* Room_Create(const char* description);
 
@@ -44,3 +50,9 @@ void Room_Print(Room *room);
 
 /* Set the flooded value of a room*/
 void Room_Flooded(Room *room, bool flooded);
+
+/* if the room is flooded, then remove one breathe from the playerState */
+void HandleFloodedRoom(PlayerState* playerState, GameState* gameState, Room* room);
+
+/* Helper: Prints the a warning if the room is flooded */
+void PrintRoomFlooded(Room *room);

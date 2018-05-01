@@ -61,8 +61,6 @@ Room* Room0_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "north", 19);
-	Room_AddRoomExit(room, "east", 11);
 	Room_AddRoomExit(room, "west", 1);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
@@ -401,13 +399,15 @@ WorldData* CreateInitialWorldData()
 
 	/* TODO REQUIRED: update room count to match the number of rooms you have created and added to the world
 	   if this number doesn't match then your game will either crash or you will end up stuck in a broken room with no exits */
-	int roomCount = 1;
+	int roomCount = 2;
 
 	/* create the new WorldData object with 3 rooms */
 	worldData = WorldData_Create("Welcome to my GAM100 Game!\n\n", roomCount);
 
 	/* build each room and assign them to the world data */
 	WorldData_SetRoom(worldData, 0, Room0_Build());
+
+	WorldData_SetRoom(worldData, 1, Room1_Build());
 
 	/* TODO: add all rooms to the world data */
 

@@ -13,8 +13,9 @@ the user from one room to another using defined exits.
 
 typedef struct CommandData CommandData;
 typedef struct GameState GameState;
+typedef struct PlayerState PlayerState;
 typedef struct WorldData WorldData;
 
 
 /* Handles the "go" command, which moves the user to another room */
-void HandleGoCommand(CommandData* command, GameState *gameState, WorldData *worldData);
+void HandleGoCommand(CommandData* command, GameState *gameState, PlayerState *playerState, WorldData *worldData);
