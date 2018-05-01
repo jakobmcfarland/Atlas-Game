@@ -60,6 +60,12 @@ Room* Room0_Build()
 	include an initial room description */
 	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
 
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 19);
+	Room_AddRoomExit(room, "east", 11);
+	Room_AddRoomExit(room, "west", 1);
+
 	return room;
 }
 
