@@ -139,6 +139,9 @@ Room* Room4_Build()
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "south", 6);
+	Room_AddRoomExit(room, "east", 2);
+	Room_AddRoomExit(room, "west", 5);
 
 	/*  set the Flooded boolean value, interacts with player's breath*/
 	Room_Flooded(room, false);
