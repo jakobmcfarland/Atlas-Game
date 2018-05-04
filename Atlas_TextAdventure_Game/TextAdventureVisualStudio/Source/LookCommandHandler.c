@@ -8,9 +8,10 @@ Brief Description:
 This file defines functions that handle the "look" user command, which outputs
 a description of an item or the current room.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #include "stdafx.h" /* NULL, printf, strnlen_s */
-#include "LookCommandHandler.h" /* Function declarations */
+#include "CommandHandlerFunctions.h" /* Function Declaration */
 #include "CommandData.h" /* struct CommandData */
 #include "GameState.h" /* struct GameState */
 #include "WorldData.h" /* WorldData_GetRoom */
@@ -20,14 +21,16 @@ a description of an item or the current room.
 
 
 /* Handles the "look" command, which outputs a description of an item or the current room */
-void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* worldData)
+void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* worldData, PlayerState *playerState)
 {
+	UNREFERENCED_PARAMETER(playerState);
+
 	Item* item; /* the item referred to by the command noun, if any */
 	Room* room; /* the current room */
 	ItemList** roomItemsPtr; /* the list of items in the room */
 
 	/* safety check on the parameters */
-	if ((command == NULL) || (gameState == NULL) || (worldData == NULL)) 
+	if ((command == NULL) || (gameState == NULL) || (worldData == NULL) || (playerState == NULL))
 	{
 		/*DEBUG: prints if room is invalid -Jakob*/
 		printf("invalid\n");
@@ -44,23 +47,13 @@ void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* wo
 		if (room != NULL)
 		{
 			printf("(looking at the room)\n"); /* clarify the target for the user */
-			Room_Print(room);
+			Room_Print(room, gameState, worldData);
 		}
 		else
 		{
 			/*DEBUG: prints if room is invalid -Jakob*/
 			printf("room is null\n");
 		}
-		return;
-	}
-
-	/* search for the item in the user's inventory, which takes precedence over the room */
-	item = ItemList_FindItem(gameState->inventory, command->noun);
-	if (item != NULL)
-	{
-		printf("(in your inventory)\n"); /* clarify the target for the user */
-		/* an item matching the noun was found in the user's inventory - print its description */
-		Item_Print(item);
 		return;
 	}
 

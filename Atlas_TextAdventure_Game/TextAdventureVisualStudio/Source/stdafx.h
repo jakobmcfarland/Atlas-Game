@@ -8,6 +8,7 @@ Brief Description:
 This file includes standard system include files, or project-specific 
 include files that are used frequently, but are changed infrequently.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #pragma once
 

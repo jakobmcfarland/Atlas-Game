@@ -1,0 +1,31 @@
+﻿  CommandListFactory.c
+  DoorFunctions.c
+  main.c
+  BreathCommandHandler.c
+  CommandHandler.c
+  CommandList.c
+  DropCommandHandler.c
+  ExitDoorFunctions.c
+  GoCommandHandler.c
+  GoldPieceFunctions.c
+  HelpCommandHandler.c
+  InventoryCommandHandler.c
+  Item.c
+  ItemList.c
+  KeycardFunctions.c
+  LookCommandHandler.c
+  NotesFunctions.c
+  QuitCommandHandler.c
+  ReadCommandHandler.c
+  Room.c
+  Compiling...
+  SwitchCommandHandler.c
+  SwitchFunctions.c
+  TakeCommandHandler.c
+  UseCommandHandler.c
+  WorldDataFactory.c
+  Generating code
+  All 124 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  GAM100Project.vcxproj -> C:\Users\j.gramer\Desktop\Atlas\TextAdventureVisualStudio\Release\GAM100Project.exe
+  GAM100Project.vcxproj -> C:\Users\j.gramer\Desktop\Atlas\TextAdventureVisualStudio\Release\GAM100Project.pdb (Full PDB)

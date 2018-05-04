@@ -9,6 +9,7 @@ This file defines the WorldData interface, which is used to manage the entire
 set of data in the game world.  This data is typically static, but it may
 not entirely be so.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 ******************************************************************************/
 #include "stdafx.h" /* NULL, malloc/free, printf, strcpy_s */
 #include "WorldData.h" /* Function declarations */
@@ -118,7 +119,7 @@ void WorldData_SetRoom(WorldData* worldData, int roomIndex, Room* room)
 
 
 /* Print the introduction to the game to the standard output */
-void WorldData_PrintIntroduction(WorldData* worldData, int initialRoomIndex)
+void WorldData_PrintIntroduction(WorldData* worldData, int initialRoomIndex, GameState *gameState)
 {
 	Room* initialRoom; /* the initial room */
 
@@ -135,5 +136,5 @@ void WorldData_PrintIntroduction(WorldData* worldData, int initialRoomIndex)
 	initialRoom = WorldData_GetRoom(worldData, initialRoomIndex);
 
 	/* print the description of the initial room */
-	Room_Print(initialRoom);
+	Room_Print(initialRoom, gameState, worldData);
 }

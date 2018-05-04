@@ -8,6 +8,7 @@ Brief Description:
 This file declares functions that handle the "inventory" user command, which outputs
 a list of the items in the player's inventory.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #pragma once
 

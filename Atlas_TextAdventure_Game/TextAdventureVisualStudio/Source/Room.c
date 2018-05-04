@@ -7,12 +7,16 @@ course      GAM100 ** Do not use this code in your team project
 Brief Description:
 This file defines the Room interface, which is used to manage rooms in the game.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 ******************************************************************************/
 #include "stdafx.h" /* NULL, malloc/free, printf, strcpy_s */
 #include "Room.h" /* Function declarations */
+#include "GameState.h" /* GameState */
 #include "PlayerState.h" /* getPLayerBreathe */
+#include "WorldData.h" /* WorldData */
 #include "RoomExit.h" /* RoomExit_Add, RoomExit_Free, RoomExit_Print */
 #include "ItemList.h" /* ItemList_Free, ItemList_Print */
+#include "GameState.h"
 
 
 /* The maximum length of a room description string */
@@ -149,7 +153,7 @@ void Room_SetDescription(Room* room, const char* description)
 
 
 /* Print the description of the given room to standard output */
-void Room_Print(Room *room)
+void Room_Print(Room *room, GameState* gameState, WorldData* worldData)
 {
 	/* safety check on the parameters */
 	if (room == NULL)
@@ -168,6 +172,8 @@ void Room_Print(Room *room)
 
 	/* Helper: Prints the a warning if the room is flooded */
 	PrintRoomFlooded(room);
+
+	PrintFloodedRooms(gameState, worldData);
 }
 
 
@@ -208,16 +214,45 @@ void PrintRoomExits(RoomExit* roomExitList)
 	printf(".\n");
 }
 
+/*****
+Functions below here.
+by: Jakob McFarland
+last edited: 5/1/2018
+brief: functions that handle the flood logic for rooms
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
+*****/
+
+
 /* Set the flooded value of a room*/
-void Room_Flooded(Room *room, bool flooded)
+void Room_SetFlooded(Room *room, bool flooded)
 {
 	/* safety check on the parameters */
 	if (room == NULL)
 	{
+		/*printf("DEBUG: Room is Null\n");*/
 		return;  /* take no action if the parameters are invalid */
 	}
 
+	/*printf("DEBUG: Flooded Got %i\n", flooded);*/
+
 	room->Flooded = flooded;
+
+	/*printf("DEBUG: Flooded set %i\n", room->Flooded);*/
+}
+
+/* Get the flooded value of a room*/
+bool Room_GetFlooded(Room *room)
+{
+	/* safety check on the parameters */
+	if (room == NULL)
+	{
+		/*printf("DEBUG: Room is Null\n");*/
+		return 0;  /* take no action if the parameters are invalid */
+	}
+
+	/*printf("DEBUG: Flooded Got %i\n", room->Flooded);*/
+
+	return room->Flooded;
 }
 
 /* Helper: Prints the a warning if the room is flooded */
@@ -245,6 +280,14 @@ void HandleFloodedRoom(PlayerState* playerState, GameState* gameState, Room* roo
 	{
 		return; /* take no action if no valid object was provided */
 	}
+	
+	/* if the room is flooded, then remove one breathe from the playerState */
+	if (room->Flooded)
+	{
+		/*printf("DEBUG: breathe at %i\n", GetPlayerBreathe(playerState));*/
+		printf("Alert: You've lost oxygen!\n");
+		SetPlayerBreathe(playerState, GetPlayerBreathe(playerState) - 1);
+	}
 
 	/* if the player's breathe is zero*/
 	if (GetPlayerBreathe(playerState) <= 0)
@@ -252,14 +295,55 @@ void HandleFloodedRoom(PlayerState* playerState, GameState* gameState, Room* roo
 		/* end the game using the death exit message */
 		GameState_EndGame(gameState, "You have drowned.\n");
 	}
-	else
+}
+
+/* Handles the "go" command, which moves the user to another room */
+void PrintFloodedRooms(GameState *gameState, WorldData *worldData)
+{
+	Room* currentRoom; /* the room we are currently in */
+	int * nextRoomIndex = 0;
+	int total = 0;
+					   /* safety check on the parameters */
+	if ((gameState == NULL) || (worldData == NULL))
 	{
-		/* if the room is flooded, then remove one breathe from the playerState */
-		if (room->Flooded)
-		{
-			printf("DEBUG: breathe at %i\n", GetPlayerBreathe(playerState));
-			printf("Alert: You've lost oxygen!\n");
-			SetPlayerBreathe(playerState, GetPlayerBreathe(playerState) - 1);
-		}
+		/*DEBUG: prints if room is invalid -Jakob*/
+		printf("invalid\n");
+		return; /* take no action if the parameters are invalid */
 	}
+
+	/* get the current room, based on the user state */
+	currentRoom = WorldData_GetRoom(worldData, gameState->currentRoomIndex);
+
+	/* check through all the exits in all directions*/
+	nextRoomIndex = RoomExit_Find(currentRoom->roomExitHead, "north", nextRoomIndex);
+	/*printf("%i\n", nextRoomIndex);*/
+	if (Room_GetFlooded(WorldData_GetRoom(worldData, nextRoomIndex)))
+	{
+		/*puts("The room to the north is flooded");*/
+		++total;
+	}
+	nextRoomIndex = RoomExit_Find(currentRoom->roomExitHead, "west", nextRoomIndex);
+	/*printf("%i\n", nextRoomIndex);*/
+	if (Room_GetFlooded(WorldData_GetRoom(worldData, nextRoomIndex)))
+	{
+		/*puts("The room to the west is flooded");*/
+		++total;
+	}
+	nextRoomIndex = RoomExit_Find(currentRoom->roomExitHead, "east", nextRoomIndex);
+	/*printf("%i\n", nextRoomIndex);*/
+	if (Room_GetFlooded(WorldData_GetRoom(worldData, nextRoomIndex)))
+	{
+		/*puts("The room to the east is flooded");*/
+		++total;
+	}
+	nextRoomIndex = RoomExit_Find(currentRoom->roomExitHead, "south", nextRoomIndex);
+	/*printf("%i\n", nextRoomIndex);*/
+	if (Room_GetFlooded(WorldData_GetRoom(worldData, nextRoomIndex)))
+	{
+		/*puts("The room to the south is flooded");*/
+		++total;
+	}
+
+	/* output the successful action */
+	/*printf("There are %i adjacent flooded rooms.\n", total);*/
 }

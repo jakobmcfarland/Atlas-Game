@@ -8,9 +8,10 @@ Brief Description:
 This file defines functions that handle the "take" user command, which removes
 an item from the current room and adds it to the user's inventory.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #include "stdafx.h" /* NULL, printf */
-#include "TakeCommandHandler.h" /* Function declarations */
+#include "CommandHandlerFunctions.h" /* Function Declaration */
 #include "CommandData.h" /* struct CommandData */
 #include "GameState.h" /* struct GameState */
 #include "WorldData.h" /* WorldData_GetRoom */
@@ -20,15 +21,17 @@ an item from the current room and adds it to the user's inventory.
 
 
 /* Handles the "take" command, which removes an item from the current room and adds it to the user's inventory */
-void HandleTakeCommand(CommandData *command, GameState* gameState, WorldData* worldData)
+void HandleTakeCommand(CommandData *command, GameState* gameState, WorldData* worldData, PlayerState *playerState)
 {
+	UNREFERENCED_PARAMETER(playerState);
+
 	Item* takenItem; /* the item removed from the room and added to the user's inventory */
 	Room* room; /* the current room */
 	ItemList** roomItemPtr; /* the list of items in the current room */
 	ItemFunc takeFunc; /* The function to be called for the given item when it is taken */
 
 	/* safety check on the parameters */
-	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL)) 
+	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL) || (playerState == NULL))
 	{
 		return; /* take no action if the parameters are invalid */
 	}

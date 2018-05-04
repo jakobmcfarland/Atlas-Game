@@ -8,6 +8,7 @@ Brief Description:
 This file declares the RoomExit interface, which is used to manage room exits
 in the game.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 ******************************************************************************/
 #pragma once
 #include "stdafx.h" /* bool */

@@ -9,6 +9,7 @@ This file declares the WorldData interface, which is used to manage the entire
 set of data in the game world.  This data is typically static, but it may 
 not entirely be so.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 ******************************************************************************/
 #pragma once
 
@@ -17,7 +18,8 @@ typedef struct Room Room;
 
 /* Forward declaration for the WorldData type */
 typedef struct WorldData WorldData;
-
+/* Forward declaration of the GameState type */
+typedef struct GameState GameState;
 
 /* Create a new WorldData object, using the provided parameters */
 WorldData* WorldData_Create(const char* introduction, unsigned int numRooms);
@@ -32,4 +34,4 @@ Room* WorldData_GetRoom(WorldData* worldData, int roomIndex);
 void WorldData_SetRoom(WorldData* worldData, int roomIndex, Room* room);
 
 /* Print the introduction to the game to the standard output */
-void WorldData_PrintIntroduction(WorldData* worldData, int initialRoomIndex);
+void WorldData_PrintIntroduction(WorldData* worldData, int initialRoomIndex, GameState* gameState);

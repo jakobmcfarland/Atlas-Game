@@ -7,6 +7,7 @@ course      GAM100 ** Do not use this code in your team project
 Brief Description:
 This file implements the command handler, parsing commands and executing functions.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #include "stdafx.h" /* NULL */
 #include "CommandHandler.h" /* Function declarations */
@@ -15,12 +16,12 @@ This file implements the command handler, parsing commands and executing functio
 
 
 /* Handles the command data and executes it against the game and world state */
-void HandleCommand(CommandData* command, GameState* gameState, WorldData* worldData, PlayerState *playerState)
+void HandleCommand(CommandData* command, GameState* gameState, WorldData* worldData, PlayerState* playerState)
 {
 	CommandFunc commandFunc; /* The command function to be executed for the given verb */
 
 	/* safety check of parameters */
-	if ((command == NULL) || (gameState == NULL) || (worldData == NULL)) 
+	if ((command == NULL) || (gameState == NULL) || (worldData == NULL) || (playerState == NULL))
 	{
 		return; /* take no action if the parameters are invalid */
 	}

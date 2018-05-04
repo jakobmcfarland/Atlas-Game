@@ -8,6 +8,7 @@ Brief Description:
 This file implements the GameState interface, which is used to reflect the user state
 in the game.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 /* from GameState.h: stdafx.h, used here for NULL, malloc/free, printf */
 #include "GameState.h" /* Function declarations */
@@ -84,7 +85,7 @@ void GameState_ChangeScore(GameState* gameState, int modifier)
 	if (modifier > 0)
 	{
 		/* the modifier was positive, so output a positive message */
-		printf("You have gained %d points.  ", modifier);
+		/* printf("You have gained %d points.  ", modifier); */
 	}
 	else
 	{
@@ -93,7 +94,7 @@ void GameState_ChangeScore(GameState* gameState, int modifier)
 	}
 
 	/* output the new score total */
-	printf("Your new score is %d.\n", gameState->score);
+	/* printf("Your new score is %d.\n", gameState->score); */
 }
 
 
@@ -114,6 +115,10 @@ void GameState_EndGame(GameState* gameState, const char* message)
 
 	/* output the final score */
 	printf("Your final score is %d.\n\n", gameState->score);
+
+	printf("================================\n");
+
+	printf("Credits:\n\nJakob McFarland, Technical Director and programmer\nJessica Gramer, Producer and programmer\nNicole Smith, QA Lead and programmer\nMaxwell van de Kamp, Creative Director and programmer\n\nInstructor:\nRyan Scheppler\n\nAll content © 2018 DigiPen (USA) Corporation, all rights reserved.\n\n");
 
 	/* output a clean goodbye message, so the user knows the game is exiting intentionally */
 	printf("Goodbye!\n\n");

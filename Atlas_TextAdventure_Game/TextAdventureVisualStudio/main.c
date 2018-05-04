@@ -7,6 +7,7 @@ course      GAM100 ** Do not use this code in your team project
 Brief Description:
 This file implements the main function and game loop.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 ******************************************************************************/
 #include "stdafx.h" /* NULL, bool */
 #include "InputProvider.h" /* GetDefaultInputFunc, ParseCommand */
@@ -45,7 +46,7 @@ int main()
 	command.context = CommandContext_User;
 
 	/* print the world introduction*/
-	WorldData_PrintIntroduction(worldData, gameState->currentRoomIndex);
+	WorldData_PrintIntroduction(worldData, gameState->currentRoomIndex, gameState);
 
 
 

@@ -7,6 +7,7 @@ course      GAM100 ** Do not use this code in your team project
 Brief Description:
 This file declares functions related to user input.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #pragma once
 

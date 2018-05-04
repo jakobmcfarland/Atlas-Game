@@ -7,10 +7,12 @@ course      GAM100 ** Do not use this code in your team project
 Brief Description:
 This file defines the functions to create a specific item, the "gold piece".
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #include "stdafx.h"
 #include "GoldPieceFunctions.h"
 #include "GameState.h"
+#include "PlayerState.h"
 #include "GameFlags.h"
 #include "Item.h"
 
@@ -18,7 +20,7 @@ typedef struct WorldData WorldData;
 
 
 /* Helper: The action performed when the gold piece is taken. */
-void GoldPiece_Take(CommandContext context, GameState* gameState, WorldData* worldData)
+void GoldPiece_Take(CommandContext context, GameState* gameState, WorldData* worldData, PlayerState *playerState)
 {
 	/* avoid W4 warnings on unused parameters - this function conforms to a function typedef */
 	UNREFERENCED_PARAMETER(context);

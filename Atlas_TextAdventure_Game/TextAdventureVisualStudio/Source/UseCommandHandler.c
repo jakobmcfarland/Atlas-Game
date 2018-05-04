@@ -8,9 +8,10 @@ Brief Description:
 This file defines functions that handle the "use" user command, which calls
 an item-specific function on a given item
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #include "stdafx.h" /* NULL, printf */
-#include "UseCommandHandler.h" /* Function declarations */
+#include "CommandHandlerFunctions.h" /* Function Declaration */
 #include "CommandData.h" /* struct CommandData, CommandContext */
 #include "GameState.h" /* struct GameState */
 #include "WorldData.h" /* WorldData_GetRoom */
@@ -20,8 +21,10 @@ an item-specific function on a given item
 
 
 /* Handles the "use" command, which calls an item-specific function on a given item */
-void HandleUseCommand(CommandData* command, GameState* gameState, WorldData* worldData)
+void HandleUseCommand(CommandData* command, GameState* gameState, WorldData* worldData, PlayerState *playerState)
 {
+	UNREFERENCED_PARAMETER(playerState);
+
 	Item* usedItem; /* the item to be used */
 	Room* room; /* the current room */
 	ItemList** roomItemsPtr; /* the list of items in the current room */
@@ -29,7 +32,7 @@ void HandleUseCommand(CommandData* command, GameState* gameState, WorldData* wor
 	CommandContext useContext = CommandContext_User; /* the context used for the "use" function*/
 
 	/* safety check on the parameters */
-	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL))
+	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL) || (playerState == NULL))
 	{
 		return;  /* take no action if the parameters are invalid */
 	}

@@ -8,9 +8,10 @@ Brief Description:
 This file defines functions that handle the "drop" user command, which removes
 the specified item from the user's inventory and adds it to the current room.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #include "stdafx.h" /* NULL */
-#include "DropCommandHandler.h" /* Function declarations */
+#include "CommandHandlerFunctions.h" /* Function Declaration */
 #include "CommandData.h" /* struct CommandData, CommandContext */
 #include "WorldData.h" /* WorldData_GetRoom, */
 #include "GameState.h" /* struct GameState */
@@ -20,15 +21,17 @@ the specified item from the user's inventory and adds it to the current room.
 
 
 /* Handles the "drop" user command, which drops an item in inventory to the current room.*/
-void HandleDropCommand(CommandData *command, GameState* gameState, WorldData* worldData)
+void HandleDropCommand(CommandData *command, GameState* gameState, WorldData* worldData, PlayerState *playerState)
 {
+	UNREFERENCED_PARAMETER(playerState);
+
 	Item* droppedItem; /* The item that is removed from inventory and added to the room */
 	Room* room; /* The room that the item is being added to */
 	ItemList** roomItemPtr; /* A pointer to the item-list pointer held by the room */
 	ItemFunc dropFunc; /* The function to be called for the given item when it is dropped */
 
 	/* safety check on the parameters */
-	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL))
+	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL) || (playerState == NULL))
 	{
 		return; /* take no action if the parameters aren't valid */
 	}

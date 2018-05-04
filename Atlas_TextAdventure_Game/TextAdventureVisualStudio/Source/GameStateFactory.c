@@ -8,6 +8,7 @@ Brief Description:
 This file implements the GameState factory, which creates the game state objects used
 in this game.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 ******************************************************************************/
 #include "GameStateFactory.h" /* Function declarations */
 #include "GameState.h" /* struct GameState, GameState_Create */

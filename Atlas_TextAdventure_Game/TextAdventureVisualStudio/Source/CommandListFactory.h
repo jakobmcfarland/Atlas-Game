@@ -8,6 +8,7 @@ Brief Description:
 This file declares the CommandList factory, which creates the commands used
 in this game.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #pragma once
 

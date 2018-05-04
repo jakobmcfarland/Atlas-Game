@@ -7,6 +7,7 @@ course      GAM100 ** Do not use this code in your team project
 Brief Description:
 This file implements the InputParser, turning user input into verbs and nouns.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #include "stdafx.h" /* NULL, strtok_s */
 #include "InputProvider.h" /* Function declarations */

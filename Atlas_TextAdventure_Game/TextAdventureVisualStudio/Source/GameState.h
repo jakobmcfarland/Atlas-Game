@@ -12,6 +12,7 @@ The mutation functions are recommended because they  provide a consistent
 user experience for operations, though those operations could also be performed 
 directly on the object.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #pragma once
 #include "stdafx.h" /* bool */

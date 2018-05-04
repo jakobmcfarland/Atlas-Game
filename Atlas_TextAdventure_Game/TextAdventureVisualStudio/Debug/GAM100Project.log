@@ -1,11 +1,16 @@
-﻿  main.c
-  Room.c
-c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\source\room.c(249): warning C4013: 'GetPlayerBreathe' undefined; assuming extern returning int
-c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\source\room.c(252): warning C4013: 'GameState_EndGame' undefined; assuming extern returning int
-c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\source\room.c(261): warning C4013: 'SetPlayerBreathe' undefined; assuming extern returning int
-  CommandHandler.c
-c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\source\commandhandler.c(46): error C2197: 'commandFunc': too many arguments for call
-  PlayerStateFactory.c
-c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\playerstatefactory.c(23): warning C4047: 'function': 'PlayerState **' differs in levels of indirection from 'PlayerState *'
-c:\users\jakob.mcfarland\documents\github\atlas-game\atlas_textadventure_game\textadventurevisualstudio\playerstatefactory.c(23): warning C4024: 'SetPlayerBreathe': different types for formal and actual parameter 1
-  Generating Code...
+﻿  Room.c
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(175): warning C4013: 'PrintFloodedRooms' undefined; assuming extern returning int
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(317): warning C4047: '=': 'int *' differs in levels of indirection from 'bool'
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(319): warning C4047: 'function': 'int' differs in levels of indirection from 'int *'
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(319): warning C4024: 'WorldData_GetRoom': different types for formal and actual parameter 2
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(324): warning C4047: '=': 'int *' differs in levels of indirection from 'bool'
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(326): warning C4047: 'function': 'int' differs in levels of indirection from 'int *'
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(326): warning C4024: 'WorldData_GetRoom': different types for formal and actual parameter 2
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(331): warning C4047: '=': 'int *' differs in levels of indirection from 'bool'
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(333): warning C4047: 'function': 'int' differs in levels of indirection from 'int *'
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(333): warning C4024: 'WorldData_GetRoom': different types for formal and actual parameter 2
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(338): warning C4047: '=': 'int *' differs in levels of indirection from 'bool'
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(340): warning C4047: 'function': 'int' differs in levels of indirection from 'int *'
+c:\users\jakob.mcfarland\desktop\atlas2\textadventurevisualstudio\source\room.c(340): warning C4024: 'WorldData_GetRoom': different types for formal and actual parameter 2
+  GAM100Project.vcxproj -> C:\Users\jakob.mcfarland\Desktop\Atlas2\TextAdventureVisualStudio\Debug\GAM100Project.exe
+  GAM100Project.vcxproj -> C:\Users\jakob.mcfarland\Desktop\Atlas2\TextAdventureVisualStudio\Debug\GAM100Project.pdb (Partial PDB)

@@ -7,10 +7,12 @@ course      GAM100 ** Do not use this code in your team project
 Brief Description:
 This file defines the functions to create a specific item, the "exit door".
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #include "stdafx.h" /* NULL, UNREFERENCED_PARAMETER */
 #include "ExitDoorFunctions.h" /* Function declarations */
 #include "GameState.h" /* struct GameState, GameState_EndGame */
+#include "PlayerState.h"
 #include "ItemList.h" /* ItemList_FindItem */
 #include "Item.h" /* Item_Create */
 
@@ -18,37 +20,22 @@ typedef struct WorldData WorldData;
 
 
 /* Helper: The action performed when the exit door is used. */
-void ExitDoor_Use(CommandContext context, GameState* gameState, WorldData* worldData)
+void ExitDoor_Use(CommandContext context, GameState* gameState, WorldData* worldData, PlayerState *playerState)
 {
-	Item* goldPiece; /* the gold piece in the user's inventory */
-	Item* egg; /* the egg in the user's inventory */
-
 	/* avoid W4 warnings on unused parameters - this function conforms to a function typedef */
 	UNREFERENCED_PARAMETER(context);
 	UNREFERENCED_PARAMETER(worldData);
-
-	/* find the gold piece in the user's inventory */
-	goldPiece = ItemList_FindItem(gameState->inventory, "gold piece");
-
-	/* find the egg in the user's inventory */
-	egg = ItemList_FindItem(gameState->inventory, "egg");
-
-	/* check if both items are in the user's inventory */
-	if ((egg == NULL) || (goldPiece == NULL))
-	{
-		/* both items were not found - tell the user about the problem and take no further action */
-		printf("You must keep searching for more treasures before you can exit!\n");
-		return;
-	}
+	UNREFERENCED_PARAMETER(gameState);
 
 	/* the user has won the game! end the game, and let them know what happened. */
-	GameState_EndGame(gameState, "Congratulations!  You leave with all of the treasures, and you win the game!\n");
+	GameState_EndGame(gameState, "You climb aboard, start the machine, and glide out of the facility into the open water.\n");
 }
 
 
 /* Build a "exit door" object */
 Item* ExitDoor_Build()
 {
+	Item * item;
 	/* Create a "exit door" item, using the functions defined in this file */
-	return Item_Create("exit door", "The exit door has a large sign that reads: \"YOU MUST POSSESS ALL TREASURES BEFORE YOU CAN EXIT.\".\n", false, ExitDoor_Use, NULL, NULL);
+	return Item_Create("submersible", "A gleaming steel vehicle sits before you, offering a promise of freedom from this hellish place.\n", false, ExitDoor_Use, NULL, NULL);
 }

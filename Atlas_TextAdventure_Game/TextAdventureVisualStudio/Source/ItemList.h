@@ -8,6 +8,7 @@ Brief Description:
 This file declares the ItemList interface, which is used to manage lists of
 items in the game.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 ******************************************************************************/
 #pragma once
 

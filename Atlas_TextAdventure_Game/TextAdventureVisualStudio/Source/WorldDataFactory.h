@@ -10,6 +10,7 @@ in this game.
 
 This could be used to create default states as well as loaded state.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.
 ******************************************************************************/
 #pragma once
 

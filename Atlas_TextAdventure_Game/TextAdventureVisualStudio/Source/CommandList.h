@@ -11,6 +11,7 @@ The mutator functions return the new effective pointer, which combines the
 existing-list and new-list scenarios.  The trade-off is that the caller 
 must usually reassign the existing variable to the return value.
 
+All content © 2018 DigiPen (USA) Corporation, all rights reserved
 ******************************************************************************/
 #pragma once
 #include "stdafx.h" /* bool */
